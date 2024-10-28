@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2024-10-28 19:30:12.361587",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_nzld",
+  "project",
+  "priority",
+  "status",
+  "is_published",
+  "route",
+  "column_break_ysmi",
+  "start_date",
+  "expected_completion",
+  "client",
+  "ticket_details_section",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "note",
+   "fieldtype": "Text Editor",
+   "label": "Note"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Projects Central",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expected_completion",
+   "fieldtype": "Date",
+   "label": "Expected Completion Date"
+  },
+  {
+   "fieldname": "section_break_nzld",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ysmi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Low",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Medium\nLow\nHigh\nUrgent"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nCompleted\nCancelled",
+   "search_index": 1
+  },
+  {
+   "fieldname": "ticket_details_section",
+   "fieldtype": "Section Break",
+   "label": "Ticket Details"
+  },
+  {
+   "fetch_from": "project.client",
+   "fieldname": "client",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client",
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "route",
+   "print_hide": 1,
+   "report_hide": 1
+  }
+ ],
+ "has_web_view": 1,
+ "is_published_field": "is_published",
+ "links": [],
+ "modified": "2024-10-28 23:36:24.116070",
+ "modified_by": "Administrator",
+ "module": "Dev Central",
+ "name": "Tickets Central",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "route",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

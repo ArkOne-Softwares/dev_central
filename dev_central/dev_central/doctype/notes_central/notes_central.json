@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-28 19:41:16.060153",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "ticket_note_section",
+  "ticket",
+  "project",
+  "client",
+  "column_break_nspg",
+  "hours",
+  "section_break_dlrn",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "ticket_note_section",
+   "fieldtype": "Section Break",
+   "label": "Ticket Note"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Text",
+   "label": "Note"
+  },
+  {
+   "fieldname": "hours",
+   "fieldtype": "Duration",
+   "label": "Hours"
+  },
+  {
+   "fieldname": "ticket",
+   "fieldtype": "Link",
+   "label": "Ticket",
+   "options": "Tickets Central"
+  },
+  {
+   "fieldname": "column_break_nspg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dlrn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "ticket.priority",
+   "fieldname": "project",
+   "fieldtype": "Data",
+   "label": "Project",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "ticket.client",
+   "fieldname": "client",
+   "fieldtype": "Data",
+   "label": "Client"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-28 23:36:54.881289",
+ "modified_by": "Administrator",
+ "module": "Dev Central",
+ "name": "Notes Central",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
