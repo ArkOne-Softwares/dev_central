@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-10-28 19:07:59.146984",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "project_name",
+  "type",
+  "status",
+  "cost",
+  "column_break_ymng",
+  "client",
+  "start_date",
+  "expected_end_date",
+  "section_break_jtdk",
+  "members",
+  "section_break_hvan",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client",
+   "options": "Clients Central",
+   "reqd": 1
+  },
+  {
+   "default": "T&M",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "T&M\nFixed"
+  },
+  {
+   "fieldname": "column_break_ymng",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Hourly Cost for T&M. Total Project Amount for Fixed.",
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "label": "Project Cost",
+   "non_negative": 1,
+   "precision": "0"
+  },
+  {
+   "default": "Waiting",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Waiting\nOn Hold\nStarted\nCompleted\nCancelled",
+   "search_index": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "label": "Expected End Date"
+  },
+  {
+   "fieldname": "section_break_hvan",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Text Editor",
+   "label": "Note"
+  },
+  {
+   "fieldname": "section_break_jtdk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "members",
+   "fieldtype": "Table",
+   "label": "Members",
+   "options": "Project Members"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-28 23:56:15.679072",
+ "modified_by": "Administrator",
+ "module": "Dev Central",
+ "name": "Projects Central",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
